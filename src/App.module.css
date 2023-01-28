@@ -1,0 +1,75 @@
+.header {
+  padding: 4.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--gray-700);
+}
+
+.container {
+  max-width: 46rem;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.taskForm {
+  display: flex;
+  gap: 0.5rem;
+
+  margin-top: calc(0px - 1.5rem);
+  padding: 0 1rem;
+
+  width: 100%;
+}
+
+.taskForm input {
+  width: 100%;
+  background: var(--gray-500);
+  
+  color: var(--gray-100);
+  
+  border: 0;
+  border-radius: 8px;
+  padding: 1rem;
+
+  font-size: 1rem;
+  line-height: 1.4;
+
+  transition: outline 0.1s;
+}
+
+.taskForm input::placeholder {
+  color: var(--gray-300);
+}
+
+.taskForm input:focus {
+  outline: none;
+}
+
+.taskForm button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: var(--blue-900);
+  color: var(--gray-100);
+
+  font-size: 0.875rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  border: 0;
+  border-radius: 8px;
+  padding: 1rem;
+
+  transition: filter 0.2s;
+}
+
+.taskForm button:hover {
+  filter: brightness(0.9);
+}
