@@ -22,6 +22,12 @@
   box-sizing: border-box;
 }
 
+body {
+  background: var(--gray-700);
+  color: var(--gray-300);
+  -webkit-font-smoothing: antialiased;
+}
+
 body, input, textarea, button {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
