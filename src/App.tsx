@@ -2,6 +2,23 @@ import { Check, PlusCircle, Trash } from "phosphor-react";
 import Logo from "./assets/logo.svg";
 
 import styles from "./App.module.css";
+import { Task } from "./components/Task";
+import { ITask } from "./types/ITask";
+
+const tasks: ITask[] = [
+  {
+    content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur minus consequatur aut ut",
+    isCompleted: false,
+  },
+  {
+    content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur minus consequatur aut ut",
+    isCompleted: false,
+  },
+  {
+    content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur minus consequatur aut ut",
+    isCompleted: false,
+  },
+];
 
 export function App() {
   return (
@@ -27,26 +44,9 @@ export function App() {
               <span>1 de 2</span>
             </div>
           </div>
-          <div className={styles.task}>
-            <button className={`${styles.taskRadio}`}>
-              <Check />
-            </button>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur minus consequatur aut ut</p>
-            <button className={styles.deleteTask}>
-              <Trash size={24} />
-            </button>
-          </div>
-          <div className={styles.task}>
-            <button className={`${styles.taskRadio} ${styles.completed}`}>
-              <Check />
-            </button>
-            <p className={`${styles.completed}`}>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur minus consequatur aut ut
-            </p>
-            <button className={styles.deleteTask}>
-              <Trash size={24} />
-            </button>
-          </div>
+          {tasks.map((task) => (
+            <Task task={task} />
+          ))}
         </div>
       </main>
     </>
