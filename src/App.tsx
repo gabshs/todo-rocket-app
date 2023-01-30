@@ -1,5 +1,5 @@
+import { Check, PlusCircle, Trash } from "phosphor-react";
 import Logo from "./assets/logo.svg";
-import { PlusCircle } from "phosphor-react";
 
 import styles from "./App.module.css";
 
@@ -24,8 +24,28 @@ export function App() {
             </div>
             <div>
               <h3>Concluídas</h3>
-              <span>0</span>
+              <span>1 de 2</span>
             </div>
+          </div>
+          <div className={styles.task}>
+            <button className={`${styles.taskRadio}`}>
+              <Check />
+            </button>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur minus consequatur aut ut</p>
+            <button className={styles.deleteTask}>
+              <Trash size={24} />
+            </button>
+          </div>
+          <div className={styles.task}>
+            <button className={`${styles.taskRadio} ${styles.completed}`}>
+              <Check />
+            </button>
+            <p className={`${styles.completed}`}>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur minus consequatur aut ut
+            </p>
+            <button className={styles.deleteTask}>
+              <Trash size={24} />
+            </button>
           </div>
         </div>
       </main>
