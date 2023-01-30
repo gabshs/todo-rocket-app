@@ -59,6 +59,7 @@
 
 .task p.completed {
   text-decoration: line-through;
+  color: var(--gray-300);
 }
 
 .deleteTask {
