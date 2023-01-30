@@ -44,6 +44,12 @@ export function App() {
     setTasks(updatedTasks);
   }
 
+  function onDeleteTask(currentTask: ITask) {
+    const filteredTasks = tasks.filter((task) => task !== currentTask);
+
+    setTasks(filteredTasks);
+  }
+
   return (
     <>
       <header className={styles.header}>
@@ -76,7 +82,7 @@ export function App() {
             </div>
           </div>
           {tasks.map((task) => (
-            <Task task={task} onChangeTask={onChangeTask} key={task.content} />
+            <Task task={task} onChangeTask={onChangeTask} onDeleteTask={onDeleteTask} key={task.content} />
           ))}
         </div>
       </main>
