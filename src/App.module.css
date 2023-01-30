@@ -103,3 +103,31 @@
 .tasksInfo div:last-child h3 {
   color: var(--purple-500);
 }
+
+.emptyList {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.emptyList img {
+  margin-top: 4rem;
+}
+
+.emptyList h2 {
+  margin-top: 1rem;
+
+  line-height: 1.4;
+  font-size: 1rem;
+
+  color: var(--gray-300);
+}
+
+.emptyList p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--gray-300);
+}

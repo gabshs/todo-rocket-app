@@ -1,4 +1,4 @@
-import { Check, PlusCircle, Trash } from "phosphor-react";
+import { Check, Clipboard, PlusCircle, Trash } from "phosphor-react";
 import Logo from "./assets/logo.svg";
 
 import styles from "./App.module.css";
@@ -81,9 +81,17 @@ export function App() {
               <span>{countCompletedTasks()}</span>
             </div>
           </div>
-          {tasks.map((task) => (
-            <Task task={task} onChangeTask={onChangeTask} onDeleteTask={onDeleteTask} key={task.content} />
-          ))}
+          {tasks.length > 0 ? (
+            tasks.map((task) => (
+              <Task task={task} onChangeTask={onChangeTask} onDeleteTask={onDeleteTask} key={task.content} />
+            ))
+          ) : (
+            <div className={styles.emptyList}>
+              <img src="./src/assets/clipboard.svg" alt="Imagem de uma prancheta" />
+              <h2>Você ainda não tem tarefas cadastradas</h2>
+              <p>Crie tarefas e organize seus itens a fazer</p>
+            </div>
+          )}
         </div>
       </main>
     </>
