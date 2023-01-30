@@ -37,6 +37,7 @@ App desenvolvido para concluir o desafio da Rocketseat e aprimorar meus aprendiz
 ## 🎨 Layout
 
 <p align="center">
+  <img alt="Tela do todo app" title="#todoApp" src="./prints/todo-screen1.png" width="800px">
   <img alt="Tela do todo app" title="#todoApp" src="./prints/todo-screen.png" width="800px">
 </p>
 
