@@ -23,6 +23,27 @@ export function App() {
     setContent("");
   }
 
+  function countCompletedTasks() {
+    if (tasks.length === 0) {
+      return tasks.length;
+    }
+
+    const completedTasks = tasks.filter((task) => task.isCompleted);
+
+    return `${completedTasks.length} de ${tasks.length}`;
+  }
+
+  function onChangeTask(currentTask: ITask) {
+    const updatedTasks = tasks.map((task) => {
+      if (currentTask === task) {
+        task.isCompleted = !task.isCompleted;
+      }
+      return task;
+    });
+
+    setTasks(updatedTasks);
+  }
+
   return (
     <>
       <header className={styles.header}>
@@ -51,11 +72,11 @@ export function App() {
             </div>
             <div>
               <h3>Concluídas</h3>
-              <span>0</span>
+              <span>{countCompletedTasks()}</span>
             </div>
           </div>
           {tasks.map((task) => (
-            <Task task={task} key={task.content} />
+            <Task task={task} onChangeTask={onChangeTask} key={task.content} />
           ))}
         </div>
       </main>
