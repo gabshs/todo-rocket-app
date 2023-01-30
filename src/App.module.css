@@ -11,9 +11,7 @@
   max-width: 46rem;
   margin: 0 auto;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 0 1rem;
 }
 
 .taskForm {
@@ -21,7 +19,6 @@
   gap: 0.5rem;
 
   margin-top: calc(0px - 1.5rem);
-  padding: 0 1rem;
 
   width: 100%;
 }
@@ -32,7 +29,7 @@
   
   color: var(--gray-100);
   
-  border: 0;
+  border: 1px solid var(--gray-700);
   border-radius: 8px;
   padding: 1rem;
 
@@ -72,4 +69,37 @@
 
 .taskForm button:hover {
   filter: brightness(0.9);
+}
+
+.tasksContent {
+  margin-top: 4rem;
+}
+
+.tasksInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tasksInfo h3 {
+  display: inline-block;
+  padding-right: 0.5rem;
+  
+  font-size: 0.875rem;
+  color: var(--blue-500);
+}
+
+.tasksInfo span {
+  padding: 0.125rem 0.5rem;
+  background: var(--gray-400);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gray-100);
+
+  border-radius: 999px;
+}
+
+.tasksInfo div:last-child h3 {
+  color: var(--purple-500);
 }

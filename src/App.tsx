@@ -16,6 +16,18 @@ export function App() {
             Criar <PlusCircle size={16} />
           </button>
         </form>
+        <div className={styles.tasksContent}>
+          <div className={styles.tasksInfo}>
+            <div>
+              <h3>Tarefas criadas</h3>
+              <span>0</span>
+            </div>
+            <div>
+              <h3>Concluídas</h3>
+              <span>0</span>
+            </div>
+          </div>
+        </div>
       </main>
     </>
   );
